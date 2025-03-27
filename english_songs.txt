@@ -1,0 +1,50 @@
+1;Queen;Bohemian Rhapsody;5:55
+2;The Beatles;Hey Jude;7:11
+3;Michael Jackson;Billie Jean;4:54
+4;Led Zeppelin;Stairway to Heaven;8:02
+5;Nirvana;Smells Like Teen Spirit;5:01
+6;The Rolling Stones;Paint It Black;3:45
+7;AC/DC;Back in Black;4:15
+8;Elton John;Rocket Man;4:41
+9;Pink Floyd;Wish You Were Here;5:40
+10;Eagles;Hotel California;6:30
+11;Bon Jovi;Livin' on a Prayer;4:09
+12;U2;With or Without You;4:56
+13;David Bowie;Heroes;6:07
+14;Metallica;Nothing Else Matters;6:28
+15;The Police;Every Breath You Take;4:13
+16;Aerosmith;Dream On;4:28
+17;Toto;Africa;4:55
+18;Guns N' Roses;Sweet Child O' Mine;5:56
+19;Red Hot Chili Peppers;Californication;5:21
+20;Oasis;Wonderwall;4:18
+21;Madonna;Like a Prayer;5:40
+22;Coldplay;Fix You;4:55
+23;Ed Sheeran;Shape of You;3:53
+24;The Weeknd;Blinding Lights;3:20
+25;Dua Lipa;Don't Start Now;3:03
+26;Bruno Mars;Uptown Funk;4:30
+27;Adele;Someone Like You;4:45
+28;Shawn Mendes;Stitches;3:26
+29;Justin Timberlake;Can't Stop the Feeling;3:56
+30;Billie Eilish;Bad Guy;3:14
+31;Imagine Dragons;Believer;3:24
+32;OneRepublic;Counting Stars;4:17
+33;Rihanna;Diamonds;3:45
+34;Lady Gaga;Shallow;3:36
+35;Beyoncé;Halo;4:21
+36;Katy Perry;Firework;3:48
+37;Maroon 5;Sugar;3:55
+38;Taylor Swift;Shake It Off;3:39
+39;Justin Bieber;Sorry;3:20
+40;Post Malone;Circles;3:35
+41;The Chainsmokers;Closer;4:04
+42;Sam Smith;Stay With Me;2:52
+43;Harry Styles;Watermelon Sugar;2:54
+44;Shakira;Hips Don't Lie;3:38
+45;The Killers;Mr. Brightside;3:42
+46;Eminem;Lose Yourself;5:26
+47;Daft Punk;Get Lucky;4:08
+48;Pharrell Williams;Happy;3:53
+49;Avicii;Wake Me Up;4:09
+50;Major Lazer;Lean On;2:56

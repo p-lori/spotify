@@ -1,0 +1,50 @@
+1;Tankcsapda;Mennyország tourist;3:45
+2;Ákos;Induljon a banzáj;4:12
+3;Halott Pénz;Valami van a levegőben;3:38
+4;ByeAlex;Kedvesem;3:47
+5;Rúzsa Magdolna;Egyszer;4:05
+6;Republic;67-es út;3:33
+7;Magna Cum Laude;Pálinka dal;3:59
+8;Wellhello;Rakpart;3:41
+9;Kiscsillag;Olajoshordó;3:29
+10;Punnany Massif;Élvezd;4:02
+11;Quimby;Most múlik pontosan;4:15
+12;Hooligans;Királylány;3:54
+13;Neoton Família;Santa Maria;4:01
+14;Omega;Gyöngyhajú lány;5:20
+15;LGT;Ringasd el magad;4:09
+16;Beatrice;8 óra munka;3:30
+17;Kowalsky meg a Vega;Amilyen hülye vagy, úgy szeretlek;3:45
+18;TNT;Titkos üzenet;3:50
+19;United;Végső vallomás;4:11
+20;Desperado;Táncolj!;3:56
+21;Honeybeast;Bódottá;3:48
+22;Caramel;Szállok a dallal;4:21
+23;Tóth Gabi;Sosem voltál;3:58
+24;FankaDeli;Magyar vagyok;3:37
+25;Children of Distance;Emlékezz rám;4:10
+26;Sub Bass Monster;Négy ütem;3:52
+27;Animal Cannibals;Takarítónő;3:40
+28;Fluor;Mizu;3:15
+29;SP;Kép maradsz;3:49
+30;New Level Empire;Valahol;3:58
+31;Zanzibár;Szólj rám, ha hangosan énekelek;4:00
+32;Hevesi Tamás;Ezt egy életen át kell játszani;3:53
+33;Csézy;Árva reggel;4:07
+34;Varga Viktor;Lehet zöld az ég;3:44
+35;Janicsák Veca;Apám hitte;4:02
+36;Erik Sumo Band;My Rocky Mountain;3:51
+37;Radics Gigi;Úgy fáj;3:55
+38;Takács Nikolas;Mindig Te;3:50
+39;Csík Zenekar;Most múlik pontosan;4:21
+40;Karthago;Requiem;5:10
+41;Bikini;Közeli helyeken;3:57
+42;Neoton Família;Holnap hajnalig;4:03
+43;Edda Művek;Kör;4:11
+44;Piramis;Ha volna két életem;4:18
+45;Keresztes Ildikó;Nem akarok többé játszani;3:45
+46;Charlie;Jég dupla whiskyvel;3:52
+47;Presser Gábor;Te majd kézen fogsz és hazavezetsz;4:09
+48;Komár László;Táncoló fekete lakkcipők;3:36
+49;Demjén Ferenc;Szerelem első vérig;4:05
+50;Zámbó Jimmy;Még nem veszíthetek;4:15
