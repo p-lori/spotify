@@ -8,4 +8,4 @@ class Separate:
         #self.link = data[4].strip()
 
     def Log(self):
-        print(f"{self.index} {self.artist} {self.title} {self.length}")
+        return f"{self.index}. {self.artist} | {self.title} | {self.length}"

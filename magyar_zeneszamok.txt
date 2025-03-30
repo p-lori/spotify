@@ -48,3 +48,4 @@
 48;Komár László;Táncoló fekete lakkcipők;3:36
 49;Demjén Ferenc;Szerelem első vérig;4:05
 50;Zámbó Jimmy;Még nem veszíthetek;4:15
+32;43;was;321
