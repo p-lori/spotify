@@ -17,6 +17,7 @@
 17;Kowalsky meg a Vega;Amilyen hülye vagy, úgy szeretlek;3:45
 18;TNT;Titkos üzenet;3:50
 19;United;Végső vallomás;4:11
+20;Desperado;Táncolj!;3:56
 21;Honeybeast;Bódottá;3:48
 22;Caramel;Szállok a dallal;4:21
 23;Tóth Gabi;Sosem voltál;3:58
@@ -36,3 +37,15 @@
 37;Radics Gigi;Úgy fáj;3:55
 38;Takács Nikolas;Mindig Te;3:50
 39;Csík Zenekar;Most múlik pontosan;4:21
+40;Karthago;Requiem;5:10
+41;Bikini;Közeli helyeken;3:57
+42;Neoton Família;Holnap hajnalig;4:03
+43;Edda Művek;Kör;4:11
+44;Piramis;Ha volna két életem;4:18
+45;Keresztes Ildikó;Nem akarok többé játszani;3:45
+46;Charlie;Jég dupla whiskyvel;3:52
+47;Presser Gábor;Te majd kézen fogsz és hazavezetsz;4:09
+48;Komár László;Táncoló fekete lakkcipők;3:36
+49;Demjén Ferenc;Szerelem első vérig;4:05
+50;Zámbó Jimmy;Még nem veszíthetek;4:15
+32;43;was;321
