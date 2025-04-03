@@ -14,7 +14,6 @@ hu = ReadFile("magyar_zeneszamok.txt")
 def Menu():
     print("1 - Zenék\n2 - Albumok\n3 - Kilép")
     inp = int(input("Választott menüpont: "))
-    print(inp)
     while inp < 1 or inp > 3:
         print("Hiba!")
         inp = int(input("Választott menüpont: "))
@@ -23,13 +22,17 @@ def Menu():
         Zene()
     elif inp == 2:
         Album()
+    elif inp == 3:
+        inp = 3
+
         
     return inp
 
 
 def Zene():
-    print("Zene")
-    input()
+    for i in range(len(en)):
+        print("Összes zene")
+
 
 def ToDo():
     todo = int(input("Mit akarsz csinálni? [1 - Zene hozzáadás] [2 - Zene kiválasztás] "
@@ -57,59 +60,85 @@ def Album():
             current = en
             currentfile = "english_songs.txt"
             print(current[i].Log())
+    elif choise == 3:
+        while Menu() == 3:
+            Menu()
+
     todo = ToDo()
-    
+
     while todo <= 0 or todo >= 6:
         print("Hiba!")
         todo = ToDo()
-    
+
     while todo <= 5 or todo >= 1:
         if todo == 1:
+            print("Írd be a zene sorszámát, hogy hova kerüljön, az előadójáz, címét és hosszát: ")
+            index = int(input("Sorszám: "))
+            artist = input("Előadó: ").lower()
+            title = input("Cím: ").lower()
+            length = input("Hossz: ").lower()
+
+            current.insert(index - 1, f"{index};{artist};{title};{length}")
+            print(current[index])
+
+            f = open(currentfile, "w", encoding="utf8")
+            for i in range(len(current)):
+                f.write(f"{current[i].index};{current[i].artist};{current[i].title};{current[i].length}\n")
+            f.close()
             cont = input("Akarsz még zenét hozzáadni? [I / N]: ").lower()
             while not cont in ["I".lower(), "N".lower()]:
                 print("Hiba!")
                 cont = input("Akarsz még zenét hozzáadni? [I / N]: ").lower()
-                
-            if cont == "I".lower():   
-                print("Írd be a zene sorszámát, hogy hova kerüljön, az előadójáz, címét és hosszát: ")
-                index = input("Sorszám: ").lower()
-                artist = input("Előadó: ").lower()
-                title = input("Cím: ").lower()
-                length = input("Hossz: ").lower()
 
-                hufile = open("magyar_zeneszamok.txt", "a", encoding="utf8")
-                hufile.write(f"{index};{artist};{title};{length}\n")
-                hufile.close()
-            elif cont == "N".lower():
-                print("Érzem baszod")
-                todo = ToDo()
+                if cont == "I".lower():
+                    continue
+                elif cont == "N".lower():
+                    todo = ToDo()
 
         elif todo == 2:
-            print()
+            chooseIndex = int(input("Írd be a zene sorszámát amit ki akarsz választani: "))
+            while chooseIndex > len(current) or chooseIndex < 0:
+                print("Hiba!")
+                chooseIndex = int(input("Írd be a zene sorszámát amit ki akarsz választani: "))
+            print(current[chooseIndex - 1].Log())
+            conti = input("Akrasz még zenét választani? [I / N]: ").lower()
+            while not conti in ["I".lower(), "N".lower()]:
+                print("Hiba!")
+                conti = input("Akrasz még zenét választani? [I / N]: ").lower()
+            if conti == "I".lower():
+                continue
+            elif conti == "N".lower():
+                Album()
+
         elif todo == 3:
-            print()
+            wich = int(input("Melyik zenét akarod kicserélni: "))
+            while wich > len(current) or wich < 0:
+                print("Hiba!")
+                wich = int(input("Melyik zenét akarod kicserélni: "))
+
+            current.pop(wich)
+
         elif todo == 4:
+            indexDelete = int(input("Írd be a zene sorszámát amit ki akarsz törölni: "))
+            while indexDelete > len(current) or indexDelete < 0:
+                print("Nincs ilyen sorszámú zene! ")
+                indexDelete = int(input("Írd be a zene sorszámát amit ki akarsz törölni: "))
+            print(f"{indexDelete}. zene törölve lett: {current[indexDelete - 1].Log()}")
+            current.pop(indexDelete - 1)
+
             delete = input("Akarsz még zenét törölni? [I / N]: ").lower()
             while not delete in ["I".lower(), "N".lower()]:
                 print("Hiba!")
                 delete = input("Akarsz még zenét törölni? [I / N]: ").lower()
             if delete == "I".lower():
-                indexDelete = int(input("Írd be a zene sorszámát amit ki akarsz törölni: "))
-                while indexDelete > len(current) or indexDelete < 0:
-                    print("Nincs ilyen sorszámú zene! ")
-                    indexDelete = int(input("Írd be a zene sorszámát amit ki akarsz törölni: "))
-                print(f"{indexDelete}. zene törölve lett: {current[indexDelete - 1].Log()}")
-
-                del current[indexDelete - 1]
+                continue
+            elif delete == "N".lower():
                 file = open(currentfile, "w", encoding="utf8")
                 for i in range(len(current)):
                     file.write(f"{current[i].index};{current[i].artist};{current[i].title};{current[i].length}\n")
+                file.close()
+                Album()
 
-                
+
         elif todo == 5:
             Album()
-
-                
-        elif choise == 3:
-            Menu()
-            
