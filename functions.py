@@ -1,15 +1,18 @@
 import classes
 
+
 def ReadFile(path):
     fileList = []
-    file = open(path, "r", encoding="utf8")
+    file = open(path, "r", encoding = "utf8")
     for i in file:
         fileList.append(classes.Separate(i))
     file.close()
     return fileList
 
+
 en = ReadFile("english_songs.txt")
 hu = ReadFile("magyar_zeneszamok.txt")
+
 
 def Menu():
     print("1 - Zenék\n2 - Albumok\n3 - Kilép")
@@ -17,7 +20,7 @@ def Menu():
     while inp < 1 or inp > 3:
         print("Hiba!")
         inp = int(input("Választott menüpont: "))
-        
+
     if inp == 1:
         Zene()
     elif inp == 2:
@@ -25,18 +28,29 @@ def Menu():
     elif inp == 3:
         inp = 3
 
-        
     return inp
 
 
 def Zene():
+    print("Összes zene az alkalmazásban")
     for i in range(len(en)):
-        print("Összes zene")
+        print(en[i].Log())
+
+    for i in range(len(hu)):
+        print(hu[i].Log())
+
+    hm = input("3 - Kilép: ")
+
+    while hm != "3":
+        print("Hiba!")
+        hm = input("3 - Kilép: ")
+
+    Menu()
 
 
 def ToDo():
     todo = int(input("Mit akarsz csinálni? [1 - Zene hozzáadás] [2 - Zene kiválasztás] "
-                                 "[3 - Zene áthelyezés] [4 - Zene törlése] [5 - Kilépés] "))
+                     "[3 - Zene áthelyezés] [4 - Zene törlése] [5 - Kilépés] "))
     return todo
 
 def Album():
@@ -47,9 +61,9 @@ def Album():
     while choise > 3 or choise < 1:
         print("Hiba!")
         choise = int(input("Választás: "))
-        
+
     current = hu
-        
+
     if choise == 1:
         for i in range(len(hu)):
             current = hu
@@ -78,10 +92,11 @@ def Album():
             title = input("Cím: ").lower()
             length = input("Hossz: ").lower()
 
-            current.insert(index - 1, f"{index};{artist};{title};{length}")
+            new_song = f"{index};{artist};{title};{length}"
+            current.insert(index - 1, classes.Separate(new_song))
             print(current[index])
 
-            f = open(currentfile, "w", encoding="utf8")
+            f = open(currentfile, "w", encoding = "utf8")
             for i in range(len(current)):
                 f.write(f"{current[i].index};{current[i].artist};{current[i].title};{current[i].length}\n")
             f.close()
@@ -115,8 +130,29 @@ def Album():
             while wich > len(current) or wich < 0:
                 print("Hiba!")
                 wich = int(input("Melyik zenét akarod kicserélni: "))
+            print(f"A választott zenéd: {current[wich - 1].artist} | {current[wich - 1].title}")
+            current.pop(wich - 1)
 
-            current.pop(wich)
+            print("Milyen zenét akrasz a helyére?")
+            toWitchArtist = input("Előadó: ")
+            toWitchTitle = input("Cím:")
+            toWitchLength = input("Hossz: ")
+
+            swap_song = f"{wich};{toWitchArtist};{toWitchTitle};{toWitchLength}"
+            current.insert(wich - 1, classes.Separate(swap_song))
+
+            swapCont = input("Akarsz még zenét kicserélni? [I / N]: ").lower()
+            while not swapCont in ["I".lower(), "N".lower()]:
+                print("HIba!")
+                swapCont = input("Akarsz még zenét kicserélni? [I / N]: ").lower()
+            if swapCont == "I".lower():
+                continue
+            elif swapCont == "N".lower():
+                swapFile = open(currentfile, "w", encoding = "utf8")
+                for i in range(len(current)):
+                    swapFile.write(f"{current[i].index};{current[i].artist};{current[i].title};{current[i].length}\n")
+                swapFile.close()
+                Album()
 
         elif todo == 4:
             indexDelete = int(input("Írd be a zene sorszámát amit ki akarsz törölni: "))
@@ -133,12 +169,11 @@ def Album():
             if delete == "I".lower():
                 continue
             elif delete == "N".lower():
-                file = open(currentfile, "w", encoding="utf8")
+                file = open(currentfile, "w", encoding = "utf8")
                 for i in range(len(current)):
                     file.write(f"{current[i].index};{current[i].artist};{current[i].title};{current[i].length}\n")
                 file.close()
                 Album()
 
-
-        elif todo == 5:
+        else:
             Album()
