@@ -94,7 +94,6 @@ def Album():
 
             new_song = f"{index};{artist};{title};{length}"
             current.insert(index - 1, classes.Separate(new_song))
-            print(current[index])
 
             f = open(currentfile, "w", encoding = "utf8")
             for i in range(len(current)):

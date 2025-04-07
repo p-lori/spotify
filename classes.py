@@ -5,7 +5,6 @@ class Separate:
         self.artist = data[1]
         self.title = data[2]
         self.length = data[3].strip()
-        #self.link = data[4].strip()
 
     def Log(self):
         return f"{self.index}. {self.artist} | {self.title} | {self.length}"
